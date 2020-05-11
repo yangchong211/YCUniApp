@@ -1,0 +1,21 @@
+page {
+    min-height: 100%;
+    height: auto;
+}
+
+
+.uni-panel-icon {
+	margin-left: 15px;
+	color: #999999;
+	font-size: 14px;
+	font-weight: normal;
+	transform: rotate(0deg);
+	transition-duration: 0s;
+	transition-property: transform;
+}
+.uni-icon{
+	width:40px;
+	height:80rpx;
+	line-height:80rpx;
+	flex-shrink:0;
+}
