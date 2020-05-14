@@ -153,6 +153,7 @@
 			"style":{
 				"navigationBarTitleText": "测试"
 			}
+			
 		},
 		{
 			"path":"pages/test/container/view",
@@ -207,6 +208,24 @@
 			"style":{
 				"navigationBarTitleText": "form案例"
 			}
+		},
+		{
+			"path":"pages/study/qq-home",
+			"style":{
+				"navigationBarTitleText": "form案例"
+			}
+		},
+		{
+			"path":"pages/study/qq-serach",
+			"style":{
+				"navigationBarTitleText": "form案例"
+			}
+		},
+		{
+			"path":"pages/study/qq-mine",
+			"style":{
+				"navigationBarTitleText": "form案例"
+			}
 		}
 	],
 	// 底部导航栏
@@ -247,6 +266,7 @@
 
 	// 下面这些都不是必须的
 	// 设置默认页面的窗口表现，不是必须的
+	// 用于设置应用的状态栏、导航条、标题、窗口背景色等
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
 		"navigationBarTitleText": "uni-app-yc",
