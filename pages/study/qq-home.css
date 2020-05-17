@@ -1,0 +1,168 @@
+.page {
+	width: 100%;
+	height: 100%;
+	background-color: #f7f7f7;
+	/* position: absolute; */
+	
+}
+
+.carousel {
+	width: 100%;
+	height: 440upx;
+}
+
+/* 热门超英 start */
+.super-hot {
+	margin-top: 12upx;
+	margin-left: 20rpx;
+	margin-right: 20rpx;
+	margin-top: 10rpx;
+	margin-bottom: 10rpx;
+}
+
+.hot-title-wapper{
+	display: flex;
+	flex-direction: row;
+	padding: 0rpx;
+	align-items: center;
+}
+
+.hot-ico{
+	width: 30upx;
+	height: 30upx;
+}
+
+.hot-title{
+	color: #333333;
+	font-weight: bold;
+	font-size: 40rpx;
+	margin-left: 30rpx;
+}
+
+.scroll-hot{
+	width: 100%;
+	white-space: nowrap;
+}
+
+.single-poster{
+	display: inline-block;
+	margin-left: 20upx;
+}
+
+.poster-wapper {
+	display: flex;
+	flex-direction: column;
+}
+
+.poster {
+	width: 200upx;
+	height: 270upx;
+}
+
+.movie-name {
+	width: 200upx;
+	margin-top: 10upx;
+	font-size: 14px;
+	font-weight: bold;
+	/* name超出则省略 */
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+
+
+/* 热门预告 start */
+.hot-movies {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	padding: 0upx 20upx 20upx 20upx;
+}
+
+.hot-movie-single{
+	width: 350rpx;
+	height: 220rpx;
+	margin-top: 10rpx;
+}
+
+
+/* 猜你喜欢 start */
+.guess-u-like{
+	display: flex;
+	flex-direction: column;
+}
+
+.single-like-movie{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	padding-left: 20rpx;
+	padding-top: 10rpx;
+}
+
+.like-movie{
+	width: 180upx;
+	height: 240upx;
+	border-radius: 15rpx;
+}
+
+.movie-desc {
+	width: 340upx;
+	display: flex;
+	flex-direction: column;
+}
+
+.movie-title {
+	padding-top: 0rpx;
+	margin-top: 0rpx;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.movie-info {
+	color: #808080;
+	font-size: 14px;
+	margin-top: 10rpx;
+}
+
+/* 点赞css */
+.movie-oper {
+	width: 140upx;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	
+	border-left: dashed 2px;
+	border-left-color: #dbdbda;
+}
+
+.praise-ico {
+	width: 40upx;
+	height: 40upx;
+	align-self: center;
+}
+
+.praise-me {
+	font-size: 14px;
+	color: #feab2a;
+	align-self: center;
+}
+
+.animation-opacity {
+	font-weight: bold;
+	opacity: 0;
+}
+
+
+
+
+
+
+
+
+
+
+

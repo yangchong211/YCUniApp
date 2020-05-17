@@ -149,61 +149,19 @@
 			}
 		},
 		{
-			"path":"pages/test/test1",
+			"path":"pages/study/qq-home",
 			"style":{
-				"navigationBarTitleText": "测试"
+				"navigationBarTitleText": "form案例"
 			}
 		},
 		{
-			"path":"pages/test/container/view",
+			"path":"pages/study/qq-serach",
 			"style":{
-				"navigationBarTitleText": "view案例"
+				"navigationBarTitleText": "form案例"
 			}
 		},
 		{
-			"path":"pages/test/container/scroll-view",
-			"style":{
-				"navigationBarTitleText": "scroll-view案例"
-			}
-		},
-		{
-			"path":"pages/test/container/swiper",
-			"style":{
-				"navigationBarTitleText": "swiper案例"
-			}
-		},
-		{
-			"path":"pages/test/basics/icon",
-			"style":{
-				"navigationBarTitleText": "icon案例"
-			}
-		},
-		{
-			"path":"pages/test/basics/text",
-			"style":{
-				"navigationBarTitleText": "text案例"
-			}
-		},
-		{
-			"path":"pages/test/basics/rich-text",
-			"style":{
-				"navigationBarTitleText": "rich-text案例"
-			}
-		},
-		{
-			"path":"pages/test/basics/progress",
-			"style":{
-				"navigationBarTitleText": "progress案例"
-			}
-		},
-		{
-			"path":"pages/test/form/button",
-			"style":{
-				"navigationBarTitleText": "button案例"
-			}
-		},
-		{
-			"path":"pages/test/form/form",
+			"path":"pages/study/qq-mine",
 			"style":{
 				"navigationBarTitleText": "form案例"
 			}
@@ -247,6 +205,7 @@
 
 	// 下面这些都不是必须的
 	// 设置默认页面的窗口表现，不是必须的
+	// 用于设置应用的状态栏、导航条、标题、窗口背景色等
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
 		"navigationBarTitleText": "uni-app-yc",
