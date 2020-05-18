@@ -165,6 +165,12 @@
 			"style":{
 				"navigationBarTitleText": "form案例"
 			}
+		},
+		{
+			"path":"pages/study/qq-movie",
+			"style":{
+				"navigationBarTitleText": "form案例"
+			}
 		}
 	],
 	// 底部导航栏
