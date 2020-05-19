@@ -181,6 +181,7 @@
 		},
 		//下拉刷新操作
 		onPullDownRefresh() {
+			//调用刷新数据
 			this.refresh();
 		},
 		//页面卸载时候调用
