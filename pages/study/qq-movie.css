@@ -35,7 +35,7 @@
 }
 
 .title {
-	font-size: 48rpx;
+	font-size: 38rpx;
 }
 
 .basic-info {
@@ -139,9 +139,16 @@
 	text-overflow: ellipsis;
 }
 
+.plot-image {
+	width: 220upx;
+	height: 320upx;
+	margin-right: 10upx;
+}
 
-
-
+.score-block-stars{
+	display: flex;
+	flex-direction: row;
+}
 
 
 

@@ -28,12 +28,12 @@
 				<view class="basic-info">{{trailerInfo.releaseDate}}</view>
 				
 				<view class="score-block">
-					<view>
+					<view >
 						<view class="score-words">综合评分：</view>
 						<view class="movie-score">{{trailerInfo.score}}</view>
 					</view>
 					<view>
-						<block v-if="trailerInfo.score >= 0">
+						<block v-if="trailerInfo.score >= 0" class="score-block-stars">
 							<trailerStars :innerScore="trailerInfo.score" showNum="0"></trailerStars>
 						</block>
 						<view class="prise-counts">
@@ -80,13 +80,31 @@
 					<view class="actor-role">{{actor.actName}}</view>
 				</view>
 			</scroll-view>
-			
 		</view>
+		
+		
+		<!-- 剧照 start -->
+		<view class="scroll-block">
+			<view class="plots-title">剧照</view>
+			<scroll-view scroll-x class="scroll-list">
+				<image 
+					v-for="(img, imgIndex) in plotPicsArray"
+					:src="img"
+					class="plot-image"
+					mode="aspectFill"
+					@click="lookMe"
+					:data-imgIndex="imgIndex"
+				></image>
+			</scroll-view>
+		</view>
+		<!-- 剧照 end -->
 		
 	</view>
 </template>
 
 <script>
+	import trailerStars from "../../components/trailer-stars.vue";
+	
 	export default {
 		data() {
 			return {
@@ -100,7 +118,35 @@
 			};
 		},
 		methods:{
+			//点击剧照
+			lookMe(e){
+				var me = this;
+				var imgIndex = e.currentTarget.dataset.imgindex;
+				uni.previewImage({
+					current: me.plotPicsArray[imgIndex],
+					urls: me.plotPicsArray
+				})
+			},
 			
+			//点击演员图片查看
+			lookStaffs(e) {
+				var me = this;
+				var staffIndex = e.currentTarget.dataset.staffindex;
+				// 拼接导演和演员的数组，成为一个新数组
+				var directorArray = me.directorArray;
+				var actorArray = me.actorArray;
+				var newStaffArray = [];
+				newStaffArray = newStaffArray.concat(directorArray).concat(actorArray);
+				var urls = [];
+				for (var i = 0; i < newStaffArray.length ; i ++) {
+					var tempPhoto = newStaffArray[i].photo;
+					urls.push(tempPhoto);
+				}
+				uni.previewImage({
+					current: urls[staffIndex],
+					urls: urls
+				})
+			}
 		},
 		onLoad(params) {
 			var me = this;
@@ -144,6 +190,20 @@
 					}
 				}
 			});
+			
+			
+			// 获取获取演员
+			uni.request({
+				url: serverUrl + '/search/staff/' + trailerId + '/2' + '?qq=786041010',
+				method: "POST",
+				success: (res) => {
+					// 获取真实数据之前，务必判断状态是否为200
+					if (res.data.status == 200) {
+						me.actorArray = res.data.data;
+						// debugger;
+					}
+				}
+			});
 		},
 		onShow() {
 			// 页面被再次显示的时候，可以继续播放
@@ -159,6 +219,44 @@
 			// 页面被隐藏的时候，暂停播放
 			this.videoContext.pause();
 		},
+		// 此函数仅仅只支持在小程序端的分享，分享到微信群或者微信好友
+		onShareAppMessage(res) {
+			var me = this;
+			return {
+			  title: me.trailerInfo.name,
+			  path: '/pages/movie/movie?trailerId=' + me.trailerInfo.id
+			}
+		},
+		// 监听导航栏的按钮
+		onNavigationBarButtonTap(e) {
+			var index = e.index;
+			var me = this;
+			var trailerInfo = me.trailerInfo;
+			var trailerId = trailerInfo.id;
+			var trailerName = trailerInfo.name;
+			var cover = trailerInfo.cover;
+			var poster = trailerInfo.poster;
+			
+			// index 为0 则分享
+			if (index == 0) {
+				uni.share({
+					provider: "weixin",
+					scene: "WXSenceTimeline",
+					type: 0,
+					href: "http://www.imovietrailer.com/#/pages/movie/movie?trailerId=" + trailerId,
+					title: "NEXT超英预告：《" + trailerName + "》",
+					summary: "NEXT超英预告：《" + trailerName + "》",
+					imageUrl: cover,
+					success: function (res) {
+						console.log("success:" + JSON.stringify(res));
+					}
+				});
+			}
+		},
+		components: {
+			//需要定义
+			trailerStars
+		}
 	}
 </script>
 

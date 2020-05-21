@@ -103,9 +103,7 @@
 		{
 			"path": "pages/mine/setting",
 			"style": {
-				"navigationBarTitleText": "设置中心",
-				"backgroundColor":"#FFFFFF",
-				"navigationBarBackgroundColor":"#FFFFFF"
+				"navigationBarTitleText": "设置中心"
 			}
 		},
 		{
@@ -167,6 +165,18 @@
 			}
 		},
 		{
+			"path":"pages/study/qq-me",
+			"style":{
+				"navigationBarTitleText": "我的页面"
+			}
+		},
+		{
+			"path":"pages/study/qq-login",
+			"style":{
+				"navigationBarTitleText": "登陆页面"
+			}
+		},
+		{
 			"path":"pages/study/qq-movie",
 			"style":{
 				"navigationBarTitleText": "form案例"
@@ -199,7 +209,7 @@
 				"text": "学习"
 			},
 			{
-				"pagePath": "pages/mine/setting",
+				"pagePath": "pages/tab/mine",
 				"iconPath": "static/tab/tab-my.png",
 				"selectedIconPath": "static/tab/tab-my-current.png",
 				"text": "我的"
