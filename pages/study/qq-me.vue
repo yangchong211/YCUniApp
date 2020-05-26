@@ -35,12 +35,32 @@
 	export default {
 			data() {
 				return {
+					//用户是否登陆
 					userIsLogin: false,
+					//用户信息
 					userInfo: {}
 				};
 			},
 			onShow() {
+				var me = this;
+				// 用户状态的切换
+				// var userInfo = uni.getStorageSync("globalUser");
+				// if (userInfo != null && userInfo != "" && userInfo != undefined) {
+				// 	me.userIsLogin = true;
+				// 	me.userInfo = userInfo;
+				// } else {
+				// 	me.userIsLogin = false;
+				// 	me.userInfo = {};
+				// }
 				
+				var userInfo = me.getGlobalUser("globalUser");
+				if (userInfo != null) {
+					me.userIsLogin = true;
+					me.userInfo = userInfo;
+				} else {
+					me.userIsLogin = false;
+					me.userInfo = {};
+				}
 			}
 		}
 </script>

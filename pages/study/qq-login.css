@@ -1,0 +1,50 @@
+.container{
+	display: flex;
+	flex-direction: column;
+	border-top: #007AFF;
+}
+
+.face-wapper{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	
+	margin-top: 120rpx;
+	margin-bottom: 120rpx;
+}
+
+.user-face{
+	width: 160upx;
+	height: 160upx;
+}
+
+.info-wapper{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	margin-left: 40rpx;
+	margin-right: 40rpx;
+	border-bottom: solid 1rpx #DBDBDA;
+	padding-bottom: 20rpx;
+}
+
+.words-lbl{
+	font-size: 40rpx;
+	color: #333333;
+}
+
+.input{
+	margin-left: 20rpx;
+	color: #929292;
+}
+
+.commit{
+	margin-top: 60rpx;
+	margin-left: 40rpx;
+	margin-right: 40rpx;
+}
+
+
+
+
+

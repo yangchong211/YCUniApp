@@ -177,6 +177,24 @@
 			}
 		},
 		{
+			"path":"pages/study/qq-sex",
+			"style":{
+				"navigationBarTitleText": "选择性别"
+			}
+		},
+		{
+			"path":"pages/study/qq-input",
+			"style":{
+				"navigationBarTitleText": "修改内容"
+			}
+		},
+		{
+			"path":"pages/study/qq-info",
+			"style":{
+				"navigationBarTitleText": "用户信息"
+			}
+		},
+		{
 			"path":"pages/study/qq-movie",
 			"style":{
 				"navigationBarTitleText": "form案例"
